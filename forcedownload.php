@@ -2,7 +2,7 @@
         if (isset($_GET['filename'])) {
             $file=$_GET['filename'];
 
-$p = "mp3/"; // change the path to fit your websites document structure
+$p = "mp3/"; // folder dove andare a recuperare i brani, andrà a comporre poi il path 
 $path = $p.$file;
  
 if ($fd = fopen ($path, "r")) {
