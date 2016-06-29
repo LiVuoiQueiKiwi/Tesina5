@@ -7,7 +7,10 @@ $path = $p.$file;
  
 if ($fd = fopen ($path, "r")) {
     $fsize = filesize($path);
-    $path_info = pathinfo($path); //   restituisce un vettore associativo contenente informazioni riguardo path. Nel vettore vegono riportati i seguenti                                     elementi: dirname, basename e extension. Infatti andremo a prendere il basename che ci servirà per il                                                 download tramite gli Header
+    $path_info = pathinfo($path); //   restituisce un vettore associativo contenente informazioni riguardo path. 
+                                //Nel vettore vegono riportati i seguenti elementi: dirname, basename e extension. 
+                                //Infatti andremo a prendere 
+                                //il basename che ci servirà per il download tramite gli Header
     header("Content-type: application/octet-stream");
     header("Content-Disposition: filename=\"".$path_info["basename"]."\"");   
     header("Content-length: $fsize");
