@@ -58,10 +58,10 @@ include('dbfunction.php');
                     <?php
                         //include ('dbfunction.php');
                         class Account {	
-		                      public function datiAccount($d,$u){
-                                 $dati = " SELECT * FROM utenti WHERE username = '$u'; ";
-                                 return $d->conn->query($dati);
-                              }
+	                	public function datiAccount($d,$u){
+                                	$dati = " SELECT * FROM utenti WHERE username = '$u'; ";
+                                	return $d->conn->query($dati);
+                        	}
                         }
                     
                         $D=new Database();
